@@ -18,8 +18,10 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@next/bundle-analyzer": "^15.2.1",
     "postcss": "^8.5.3",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^10.1.5"
+    "postcss-preset-env": "^10.1.5",
+    "postcss-purgecss": "^5.0.0"
   }
 }
