@@ -1,8 +1,9 @@
 
-import "./globals.css";
-import  "bootstrap/dist/css/bootstrap.min.css"
+//import "./globals.css";
+//import "bootstrap/dist/css/bootstrap.min.css"
+//import "bootstrap/dist/css/bootstrap.min.css"
 //import "../styles/custom-bootstrap.scss";
-//import "@/app/styles/custom-bootstrap.scss"
+import "@/app/styles/custom-bootstrap.scss"
 import AddBootstrap from "./AddBootstrap";
 
 
