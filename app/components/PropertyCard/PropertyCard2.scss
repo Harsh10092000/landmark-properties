@@ -1,0 +1,220 @@
+// PropertyCard2.scss
+$primary: #4f46e5;
+$secondary: #10b981;
+$dark: #1e293b;
+$light: #f1f5f9;
+$gray: #64748b;
+
+.property-grid {
+  padding: 40px 0;
+  background: $light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $dark;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 50px;
+        height: 3px;
+        background: $primary;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .property-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image {
+      position: relative;
+      height: 180px;
+
+      .property-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover .property-img {
+        transform: scale(1.05);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+
+        .views {
+          background: rgba(255, 255, 255, 0.2);
+          color: white;
+          padding: 4px 8px;
+          border-radius: 12px;
+          font-size: 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          backdrop-filter: blur(2px);
+        }
+
+        .status {
+          background: $secondary;
+          color: white;
+          padding: 4px 10px;
+          border-radius: 12px;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .card-content {
+      padding: 15px;
+
+      .card-title {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        a {
+          color: $primary;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: darken($primary, 10%);
+          }
+        }
+      }
+
+      .location {
+        font-size: 0.9rem;
+        color: $gray;
+        margin-bottom: 10px;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+        .price {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: $secondary;
+        }
+
+        .size {
+          font-size: 0.9rem;
+          color: $gray;
+        }
+      }
+
+      .features {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+        color: $dark;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          small {
+            color: $gray;
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 10px;
+
+        .listed-by {
+          font-size: 0.8rem;
+          color: $gray;
+        }
+
+        .view-btn {
+          background: $primary;
+          color: white;
+          padding: 6px 12px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-size: 0.85rem;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: darken($primary, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .property-grid {
+    padding: 30px 0;
+
+    .container {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    .property-card {
+      .card-image {
+        height: 160px;
+      }
+
+      .card-content {
+        padding: 12px;
+
+        .card-title {
+          font-size: 1.1rem;
+        }
+
+        .details {
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
