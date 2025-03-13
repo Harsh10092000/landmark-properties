@@ -21,7 +21,7 @@ const Hero = () => {
           </h1>
           <div className="hero-tag-line-2-wrapper">
             <p className="hero-tag-line-2">
-              Build your next project using Next.js 14, Prisma, Neon, Auth.js
+              Build your next project using Next.js 14, Prisma, Neon, Auth.js <br />
               v5, Resend, React Email, Shadcn/ui, Stripe.
             </p>
           </div>
