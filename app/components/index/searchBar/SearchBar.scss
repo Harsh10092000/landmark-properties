@@ -1,0 +1,93 @@
+
+
+// Container styling
+.search-bar-container {
+//   background: linear-gradient(90deg, #2c3e50, #3498db);
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+  width: 70%;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Search bar layout
+.search-bar {
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .form-select,
+  .form-control {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    background: #fff;
+
+    &:focus {
+      box-shadow: none;
+      border-color: #ced4da;
+    }
+  }
+
+  .dropdown {
+    
+    color: #2c3e50;
+
+    &:after {
+      content: none; // Remove default Bootstrap arrow
+    }
+
+    option {
+      color: #2c3e50;
+    }
+  }
+
+  .search-input {
+    flex-grow: 1;
+  
+    color: #6c757d;
+    &::placeholder {
+      color: #6c757d;
+      opacity: 1;
+    }
+  }
+
+  .search-button {
+    padding: 8px 20px;
+    background-color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #233140;
+    }
+
+    .search-icon {
+      margin-right: 5px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+
+    .form-select,
+    .form-control,
+    .search-button {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
