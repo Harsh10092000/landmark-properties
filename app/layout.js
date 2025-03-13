@@ -5,7 +5,14 @@
 //import "../styles/custom-bootstrap.scss";
 import "@/app/styles/custom-bootstrap.scss"
 import AddBootstrap from "./AddBootstrap";
+import Header from "./components/Header/Header";
+import { Urbanist } from "next/font/google";
 
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "700", "800", "900"], // Adjust weights as needed
+  variable: "--font-urbanist", // Optional: CSS variable for use in SCSS
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -15,8 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={urbanist.className}>
         <AddBootstrap />
+        <Header />
         {children}
       </body>
     </html>
