@@ -1,5 +1,12 @@
-import React from 'react';
-import './AboutUs.scss';
+"use client";
+import React from "react";
+import { Urbanist } from "next/font/google";
+import "./AboutUs.scss";
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+});
 
 const FeatureItem = ({ iconSrc, title, description, altText }) => (
   <div className="feature-item">
@@ -24,36 +31,35 @@ const AboutUs = () => {
       iconSrc: "https://img.icons8.com/ios/50/ffffff/search-property.png",
       title: "Smart Matching",
       description: "Connect instantly with verified buyers or sellers.",
-      altText: "Search property icon"
+      altText: "Search property icon",
     },
     {
       iconSrc: "https://img.icons8.com/ios/50/ffffff/real-estate.png",
       title: "Free Listings",
       description: "Showcase properties at no cost with premium exposure.",
-      altText: "Real estate icon"
+      altText: "Real estate icon",
     },
     {
       iconSrc: "https://img.icons8.com/ios/50/ffffff/3d-property.png",
       title: "3D Tours",
       description: "Explore or showcase properties with virtual tours.",
-      altText: "3D property icon"
+      altText: "3D property icon",
     },
     {
       iconSrc: "https://img.icons8.com/ios/50/ffffff/handshake.png",
       title: "Direct Access",
       description: "Reach authenticated parties effortlessly.",
-      altText: "Handshake icon"
-    }
+      altText: "Handshake icon",
+    },
   ];
 
   return (
-    <section className="about-us-section">
+    <section className={`about-us-section ${urbanist.className}`}>
       <div className="about-us-container">
         <div className="about-content">
           <div className="text-content">
             <h2 className="section-title">
-              Discover Propertyease
-              <span className="title-accent"></span>
+              Discover Propertyease <span className="title-accent"></span>
             </h2>
             <p className="section-description">
               Since 2023, we've been revolutionizing real estate with cutting-edge

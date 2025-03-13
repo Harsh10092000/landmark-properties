@@ -25,22 +25,10 @@ const Hero = () => {
               v5, Resend, React Email, Shadcn/ui, Stripe.
             </p>
           </div>
-          <SearchBar />
-          {/* <div className="hero-footer-wrapper">
-         
-            <div className="hero-footer"> 
-            <div className="left-border"></div>
-              <div className="hero-footer-heading">I'm here to</div>
-              <div className="hero-footer-options">
-                <div>Commercial </div>
-                <div>Land/Plots</div>
-                <div>Residential</div>
-                <div>List Property</div>
-               
-              </div>
-            </div>
-          </div> */}
           <HeroFooter />
+          <SearchBar />
+          
+         
         </div>
       </div>
     </section>
