@@ -9,6 +9,9 @@ const HeroFooter = () => {
     { label: "Land/Plots", href: "/land-plots" },
     { label: "Residential", href: "/residential" },
     { label: "List Property", href: "/list-property" },
+    // { label: "Residential", href: "/residential" },
+    // { label: "Land/Plots", href: "/list-property" },
+    // { label: "Rent", href: "/Rent" },
   ];
 
   return (
